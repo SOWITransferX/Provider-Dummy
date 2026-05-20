@@ -1,9 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.5.11709.299 stable
+VisualStudioVersion = 18.5.11709.299
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransferX.Provider.Dummy", "TransferX.Provider.Dummy\TransferX.Provider.Dummy.csproj", "{A745685C-AFE4-44FC-89D8-B2F49317C320}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0498FBB8-9D59-4F56-AB44-CCACF2C3D79C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransferX.Provider.Dummy", "src\TransferX.Provider.Dummy\TransferX.Provider.Dummy.csproj", "{6B634A6D-BAB8-3DAD-7484-F868EC8A8807}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransferX.Provider.Dummy.Test", "tests\TransferX.Provider.Dummy.Test\TransferX.Provider.Dummy.Test.csproj", "{A6658C0A-A2EB-A14E-7F0F-6552D6147FB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A5C15E6-C9C9-464E-88DC-85F5FC061936}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +23,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A745685C-AFE4-44FC-89D8-B2F49317C320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A745685C-AFE4-44FC-89D8-B2F49317C320}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A745685C-AFE4-44FC-89D8-B2F49317C320}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A745685C-AFE4-44FC-89D8-B2F49317C320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B634A6D-BAB8-3DAD-7484-F868EC8A8807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B634A6D-BAB8-3DAD-7484-F868EC8A8807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B634A6D-BAB8-3DAD-7484-F868EC8A8807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B634A6D-BAB8-3DAD-7484-F868EC8A8807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6658C0A-A2EB-A14E-7F0F-6552D6147FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6658C0A-A2EB-A14E-7F0F-6552D6147FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6658C0A-A2EB-A14E-7F0F-6552D6147FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6658C0A-A2EB-A14E-7F0F-6552D6147FB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6658C0A-A2EB-A14E-7F0F-6552D6147FB9} = {0498FBB8-9D59-4F56-AB44-CCACF2C3D79C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E71F8947-38AB-456D-ACE5-33ABAB6AD9DC}
