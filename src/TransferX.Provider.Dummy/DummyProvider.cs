@@ -18,16 +18,32 @@ namespace TransferX.Provider.Dummy;
 /// Unterstützt: Auflisten von Ordnern und Dateien, Hoch- und Herunterladen,<br/>
 /// Erstellen und Löschen von Ordnern und Dateien im konfigurierten Basisverzeichnis.
 /// </summary>
-/// <param name="loggerFactory">
-/// Optionaler LoggerFactory für die Erstellung von Loggers in den Queries und Commands.
-/// </param>
 [ProviderMetadata]
-public sealed class DummyProvider(ILoggerFactory? loggerFactory = null) : IProvider
+public sealed class DummyProvider : IProvider
 {
     private string _basePath = string.Empty;
     private ProviderCredentials? _credentials;
     private bool _isInitialized;
-    private readonly ILoggerFactory? _loggerFactory = loggerFactory;
+    private readonly ILoggerFactory? _loggerFactory;
+
+    /// <summary>
+    /// Erstellt eine Provider-Instanz für die Plugin-Discovery via <c>Activator.CreateInstance</c>.
+    /// </summary>
+    public DummyProvider()
+        : this(null)
+    {
+    }
+
+    /// <summary>
+    /// Erstellt eine Provider-Instanz mit optionalem <see cref="ILoggerFactory"/> für Tests.
+    /// </summary>
+    /// <param name="loggerFactory">
+    /// Optionaler LoggerFactory für die Erstellung von Loggers in den Queries und Commands.
+    /// </param>
+    public DummyProvider(ILoggerFactory? loggerFactory)
+    {
+        this._loggerFactory = loggerFactory;
+    }
 
     /// <inheritdoc/>
     public string Name => "Dummy Provider";
