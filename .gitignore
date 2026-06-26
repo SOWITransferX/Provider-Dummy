@@ -9,8 +9,12 @@
 *.user
 *.userosscache
 *.sln.docstates
-Dummy.code-workspace
-/scripts/Build-ProviderDummy.ps1
+
+# Projekt-/IDE-spezifisch (lokal)
+.cursor
+.vscode/
+*.code-workspace
+scripts/Build-*.ps1
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
