@@ -40,6 +40,17 @@ Weitere Informationen zur Architektur und zum Gesamtsystem befinden sich in der 
 | `BasePath`    | Existierendes Root-Verzeichnis (Pflicht)                    |
 | `Credentials` | Optional; werden nicht ausgewertet und nur maskiert geloggt |
 
+## Abhängigkeiten
+
+| Paket | Version | Quelle |
+| --- | --- | --- |
+| `TransferX.Provider.Abstractions` | `3.0.0` | nuget.org |
+
+Transitiv folgt `TransferX.Domain` in derselben Version.
+Das Plugin referenziert `TransferX.Core` nicht.
+
+Die Plugin-Version (`IProvider.Version`, Projektdatei) bleibt `1.0.0` und ist nicht an die SDK-Version gekoppelt.
+
 ## Projektstruktur
 
 - `src/TransferX.Provider.Dummy` – Provider-Implementierung

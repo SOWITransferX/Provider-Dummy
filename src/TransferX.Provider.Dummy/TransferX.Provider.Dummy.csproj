@@ -16,7 +16,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.3" />
-    <PackageReference Include="TransferX.Provider.Abstractions" Version="26.5.5" />
+    <!-- SDK 3.0.0 von nuget.org. Keine Referenz auf TransferX.Core. -->
+    <PackageReference Include="TransferX.Provider.Abstractions" Version="3.0.0" />
   </ItemGroup>
 
 </Project>
